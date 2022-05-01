@@ -1,12 +1,13 @@
-package com.example.BookBath.presentation
+package com.example.BookBath.presentation.auth.signup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.BookBath.data.room.User
+import com.example.BookBath.data.room.Barber
 import com.example.BookBath.databinding.ActivitySignUpBinding
+import com.example.BookBath.presentation.auth.signin.SignInActivity
 import com.example.BookBath.presentation.viewmodel.UserViewModel
 
 class SignUpActivity : AppCompatActivity() {
@@ -40,18 +41,17 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun register() {
         binding.apply{
-            val username = edtUsername.text.toString()
+            val username = edtName.text.toString()
             val email = edtEmail.text.toString()
             val password = edtPassword.text.toString()
 
-            val userRegister = User(
+            val userRegister = Barber(
                 0,
                 username,
                 email,
                 password
             )
 
-            viewModel.registerUser(userRegister)
             startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
             Toast.makeText(this@SignUpActivity, "Register Success", Toast.LENGTH_SHORT).show()
             finish()

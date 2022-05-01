@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 @Entity(tableName = "tb_user")
-data class User(
+data class Barber(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     @ColumnInfo(name = "user_username")

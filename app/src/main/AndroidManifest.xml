@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bookbath">
         <activity
-            android:name=".presentation.SignUpActivity"
+            android:name=".presentation.auth.signup.SignUpActivity"
             android:exported="true" />
         <activity
-            android:name=".presentation.SignInActivity"
+            android:name=".presentation.auth.signin.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

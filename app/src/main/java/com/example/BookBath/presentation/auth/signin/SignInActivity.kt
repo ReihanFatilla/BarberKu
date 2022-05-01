@@ -1,11 +1,11 @@
-package com.example.BookBath.presentation
+package com.example.BookBath.presentation.auth.signin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import com.example.BookBath.R
 import com.example.BookBath.databinding.ActivitySignInBinding
+import com.example.BookBath.presentation.auth.signup.SignUpActivity
 import com.example.BookBath.presentation.viewmodel.UserViewModel
 
 class SignInActivity : AppCompatActivity() {
@@ -47,7 +47,7 @@ class SignInActivity : AppCompatActivity() {
                 edtPassword.error = "Username and Password is required"
             }
         } else {
-            viewModel.loginUser(this , binding , username, password)
+//            viewModel.loginUser(this , binding , username, password)
         }
     }
 }

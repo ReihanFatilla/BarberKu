@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.BookBath.presentation.SignUpActivity"
+    tools:context="com.example.BookBath.presentation.auth.signup.SignUpActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:paddingHorizontal="15dp">
@@ -21,11 +21,11 @@
         android:padding="10dp" />
 
     <EditText
-        android:id="@+id/edt_username"
+        android:id="@+id/edt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:hint="Username"
+        android:hint="Name"
         android:inputType="text" />
 
     <EditText

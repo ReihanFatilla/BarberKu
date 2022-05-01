@@ -10,10 +10,10 @@ import androidx.room.Query
 interface BarberDao {
 
     @Insert
-    fun addBarber(bookedBarber: BookedBarber)
+    suspend fun addBarber(bookedBarber: BookedBarber)
 
     @Delete
-    fun deleteBarber(bookedBarber: BookedBarber)
+    suspend fun deleteBarber(bookedBarber: BookedBarber)
 
     @Query("SELECT * FROM tb_booked_barber")
     fun getAllBarber(): LiveData<List<BookedBarber>>

@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.BookBath.MainActivity
+import com.example.BookBath.presentation.home.HomeActivity
 import com.example.BookBath.data.remote.firebase.User
 import com.example.BookBath.data.local.sharedpref.LoginPreference
 import com.example.BookBath.databinding.ActivitySignInBinding
@@ -36,7 +36,7 @@ class SignInActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if(preferences.getLoginStatus(LoginPreference.PREF_LOGIN_STATUS)){
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
         }
     }
 
@@ -79,7 +79,7 @@ class SignInActivity : AppCompatActivity() {
                     if (user.password.equals(password)){
                         preferences.put(LoginPreference.PREF_LOGIN_STATUS, true)
                         preferences.put(LoginPreference.PREF_NAME, user.name.toString())
-                        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+                        startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
                     } else {
                         Toast.makeText(this@SignInActivity, "Password salah", Toast.LENGTH_SHORT).show()
                     }

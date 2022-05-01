@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247061055558",
+    "project_id": "bookbath-1f99c",
+    "storage_bucket": "bookbath-1f99c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247061055558:android:9fa94bb8558ee402d36247",
+        "android_client_info": {
+          "package_name": "com.example.bookingbathroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247061055558-hl2k97bdjoai2i83cmm13s2r4cfnjslt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6CstgbTvctmFfN-3ea4s4m06maIiBAa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247061055558-hl2k97bdjoai2i83cmm13s2r4cfnjslt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

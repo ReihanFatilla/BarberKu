@@ -74,19 +74,16 @@ class SignInActivity : AppCompatActivity() {
         mDatabasePreference.child(email.replace(".", "|")).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 val user = snapshot.getValue(User::class.java)
-                if (user != null) {
-                    if(user.email == null){
-                        Toast.makeText(this@SignInActivity, "Email belum terdaftar", Toast.LENGTH_SHORT).show()
-                    } else {
-                        if (user.password.equals(password)){
-                            preferences.put(LoginPreference.PREF_LOGIN_STATUS, true)
-                            startActivity(Intent(this@SignInActivity, MainActivity::class.java))
-                        } else {
-                            Toast.makeText(this@SignInActivity, "Password salah", Toast.LENGTH_SHORT).show()
-                        }
-                    }
+                if(user?.email == null){
+                    Toast.makeText(this@SignInActivity, "Email belum terdaftar", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this@SignInActivity, "the user is null", Toast.LENGTH_SHORT).show()
+                    if (user.password.equals(password)){
+                        preferences.put(LoginPreference.PREF_LOGIN_STATUS, true)
+                        preferences.put(LoginPreference.PREF_NAME, user.name.toString())
+                        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+                    } else {
+                        Toast.makeText(this@SignInActivity, "Password salah", Toast.LENGTH_SHORT).show()
+                    }
                 }
 
             }

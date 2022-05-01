@@ -52,7 +52,7 @@ class SignUpActivity : AppCompatActivity() {
     private fun register() {
         binding.apply{
             val name = edtName.text.toString()
-            val email = edtEmail.text.toString()
+            val email = edtEmail.text.toString().lowercase()
             val password = edtPassword.text.toString()
             val confirmPass = edtPasswordConfirm.text.toString()
 
@@ -83,7 +83,7 @@ class SignUpActivity : AppCompatActivity() {
         mDataseReference.child("email").addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 var user = snapshot.getValue(User::class.java)
-                if(user?.email == null){
+                if(user?.email?.replace(".", "|")  == null){
                     mDataseReference.child(email.replace(".", "|")).setValue(userRegister)
                     startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
                 } else {

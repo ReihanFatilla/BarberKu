@@ -18,8 +18,17 @@ class LoginPreference(context: Context) {
             .apply()
     }
 
+    fun put(key: String, value: String){
+        prefEditor.putString(key, value)
+            .apply()
+    }
+
     fun getLoginStatus(key: String): Boolean {
         return sharedPreferences.getBoolean(key, false)
+    }
+
+    fun getName(key: String): String? {
+        return sharedPreferences.getString(key, null)
     }
 
     fun logout(){
@@ -28,6 +37,7 @@ class LoginPreference(context: Context) {
     }
 
     companion object{
-        const val PREF_LOGIN_STATUS = "PREF_USERNAME"
+        const val PREF_LOGIN_STATUS = "PREF_IS_LOGIN"
+        const val PREF_NAME = "PREF_NAME"
     }
 }

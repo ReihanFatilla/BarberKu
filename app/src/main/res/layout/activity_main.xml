@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,14 +12,33 @@
         android:layout_height="match_parent"
         android:paddingHorizontal="15dp">
 
-        <LinearLayout
-            android:id="@+id/ll_hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+        <ImageView
+            android:id="@+id/img_user_profile"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
+            app:tint="@color/PrimaryColor"/>
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/img_user_profile"
+            app:layout_constraintBottom_toBottomOf="@id/img_user_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:text="Logout" />
+
+        <LinearLayout
+            android:id="@+id/ll_hello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/img_user_profile"
+            app:layout_constraintStart_toStartOf="parent"
             android:gravity="start|bottom">
 
             <TextView
@@ -31,23 +50,16 @@
                 android:text="Halo, " />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/PrimaryColor"
+                android:maxLines="1"
                 android:text="Reihan" />
 
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/ic_baseline_account_circle_24"
-            app:layout_constraintTop_toTopOf="@id/ll_hello"
-            app:layout_constraintBottom_toBottomOf="@id/tv_ask"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:tint="@color/PrimaryColor"/>
 
         <TextView
             android:id="@+id/tv_ask"
@@ -56,17 +68,17 @@
             app:layout_constraintTop_toBottomOf="@id/ll_hello"
             app:layout_constraintStart_toStartOf="parent"
             android:textSize="16sp"
-            android:text="Sudahkah anda mandi hari ini?"/>
+            android:text="Ingin Cukur Rambut?"/>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_add_booking"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/PrimaryColor"
             android:layout_marginTop="10dp"
             android:clickable="true"
             android:focusable="true"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_ask">
 
@@ -75,23 +87,23 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:padding="10dp">
+                android:padding="15dp">
 
                 <ImageView
                     android:id="@+id/ic_add_booking"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/ic_add"
-
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_add_book"
+                    app:tint="@color/white"
                     />
 
                 <TextView
                     android:id="@+id/tv_add_booking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Booking Kamar Mandi"
-                    android:textSize="15sp"
-                    android:layout_marginStart="15dp"
+                    android:text="Booking Tempat"
+                    android:textSize="16sp"
+                    android:layout_marginStart="10dp"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
@@ -108,6 +120,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cv_add_booking" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -124,4 +137,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="PrimaryColor">#1a237e</color>
-    <color name="LighterPrimaryColor">#534bae</color>
-    <color name="DarkerPrimaryColor">#000051</color>
+    <color name="PrimaryColor">#FF000000</color>
+    <color name="LighterPrimaryColor">#FF000000</color>
+    <color name="DarkerPrimaryColor">#FF000000</color>
+<!--    <color name="PrimaryColor">#1a237e</color>-->
+<!--    <color name="LighterPrimaryColor">#534bae</color>-->
+<!--    <color name="DarkerPrimaryColor">#000051</color>-->
 
     <color name="TextColor">#ffffff</color>
 </resources>

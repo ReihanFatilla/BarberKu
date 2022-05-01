@@ -3,7 +3,7 @@ package com.example.BookBath.data.sharedpref
 import android.content.Context
 import android.content.SharedPreferences
 
-class LoginPref(context: Context) {
+class LoginPreference(context: Context) {
     private val PREF_NAME = "loginpreferences"
     var sharedPreferences: SharedPreferences
     var prefEditor: SharedPreferences.Editor
@@ -27,10 +27,7 @@ class LoginPref(context: Context) {
             .apply()
     }
 
-
     companion object{
-        const val PREF_USERNAME = "PREF_USERNAME"
-        const val PREF_EMAIL = "PREF_USERNAME"
         const val PREF_LOGIN_STATUS = "PREF_USERNAME"
     }
 }

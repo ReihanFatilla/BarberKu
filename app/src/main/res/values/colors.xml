@@ -7,11 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gray">#FAFAFA</color>
+    <color name="gray">#F3F3F3</color>
+    <color name="dark_gray">#C8C8C8</color>
 
-    <color name="PrimaryColor">#FF000000</color>
-    <color name="LighterPrimaryColor">#FF000000</color>
-    <color name="DarkerPrimaryColor">#FF000000</color>
+    <color name="PrimaryColor">#454E7E</color>
+    <color name="LighterPrimaryColor">#4F5987</color>
+    <color name="DarkerPrimaryColor">#4A5483</color>
 <!--    <color name="PrimaryColor">#1a237e</color>-->
 <!--    <color name="LighterPrimaryColor">#534bae</color>-->
 <!--    <color name="DarkerPrimaryColor">#000051</color>-->

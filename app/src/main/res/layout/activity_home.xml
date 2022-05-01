@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingHorizontal="15dp">
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/bg_app">
 
         <ImageView
             android:id="@+id/img_user_profile"
@@ -20,17 +21,18 @@
             android:src="@drawable/ic_baseline_account_circle_24"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:tint="@color/PrimaryColor"/>
+            app:tint="@color/white"/>
 
         <TextView
             android:id="@+id/tv_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
             app:layout_constraintTop_toTopOf="@id/img_user_profile"
             app:layout_constraintBottom_toBottomOf="@id/img_user_profile"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="10dp"
-            android:text="Logout" />
+            android:text="Keluar" />
 
         <LinearLayout
             android:id="@+id/ll_hello"
@@ -46,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:textStyle="normal"
-                android:textColor="@color/black"
+                android:textColor="@color/gray"
                 android:text="Halo, " />
 
             <TextView
@@ -55,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:textColor="@color/PrimaryColor"
+                android:textColor="@color/white"
                 android:maxLines="1"
                 android:text="Reihan" />
 
@@ -68,13 +70,14 @@
             app:layout_constraintTop_toBottomOf="@id/ll_hello"
             app:layout_constraintStart_toStartOf="parent"
             android:textSize="16sp"
+            android:textColor="@color/gray"
             android:text="Ingin Cukur Rambut?"/>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_add_booking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/PrimaryColor"
+            android:backgroundTint="@color/white"
             android:layout_marginTop="15dp"
             android:clickable="true"
             android:focusable="true"
@@ -91,10 +94,10 @@
 
                 <ImageView
                     android:id="@+id/ic_add_booking"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/ic_add_book"
-                    app:tint="@color/white"
+                    app:tint="@color/PrimaryColor"
                     />
 
                 <TextView
@@ -102,37 +105,59 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Booking Tempat"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:layout_marginStart="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/LighterPrimaryColor"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/tv_list_booking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jadwal Booking Kamu"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cv_add_booking" />
-
-        <androidx.recyclerview.widget.RecyclerView
+        <com.google.android.material.card.MaterialCardView
+            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="-15dp"
             android:layout_marginEnd="-15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.482"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_list_booking"
-            tools:listitem="@layout/item_bookbath" />
+            app:layout_constraintTop_toBottomOf="@id/cv_add_booking">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-15dp"
+                android:layout_marginEnd="-15dp">
+
+                <TextView
+                    android:id="@+id/tv_list_booking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jadwal Booking Kamu"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-15dp"
+                    android:layout_marginEnd="-15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.482"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_list_booking"
+                    tools:listitem="@layout/item_bookbath" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

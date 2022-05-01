@@ -4,10 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
 import com.example.BookBath.MainActivity
-import com.example.BookBath.data.firebase.User
-import com.example.BookBath.data.sharedpref.LoginPreference
+import com.example.BookBath.data.remote.firebase.User
+import com.example.BookBath.data.local.sharedpref.LoginPreference
 import com.example.BookBath.databinding.ActivitySignInBinding
 import com.example.BookBath.presentation.auth.signup.SignUpActivity
 import com.google.firebase.FirebaseApp

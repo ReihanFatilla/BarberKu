@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
-import com.example.BookBath.MainActivity
-import com.example.BookBath.data.firebase.User
+import com.example.BookBath.data.remote.firebase.User
 import com.example.BookBath.databinding.ActivitySignUpBinding
 import com.example.BookBath.presentation.auth.signin.SignInActivity
 import com.google.firebase.FirebaseApp

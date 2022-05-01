@@ -1,4 +1,4 @@
-package com.example.BookBath.data.sharedpref
+package com.example.BookBath.data.local.sharedpref
 
 import android.content.Context
 import android.content.SharedPreferences

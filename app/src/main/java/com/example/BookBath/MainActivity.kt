@@ -3,10 +3,9 @@ package com.example.BookBath
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.BookBath.data.sharedpref.LoginPreference
+import com.example.BookBath.data.local.sharedpref.LoginPreference
 import com.example.BookBath.databinding.ActivityMainBinding
 import com.example.BookBath.presentation.auth.signin.SignInActivity
-import java.util.prefs.Preferences
 
 class MainActivity : AppCompatActivity() {
 

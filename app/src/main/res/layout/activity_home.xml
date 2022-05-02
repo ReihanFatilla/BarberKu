@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.home.HomeActivity"
-    >
+    android:background="@color/gray">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:id="@+id/img_user_profile"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
             android:src="@drawable/ic_baseline_account_circle_24"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="-15dp"
                     android:layout_marginEnd="-15dp"
-
+                    tools:listitem="@layout/item_bookbath"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.482"
                     app:layout_constraintStart_toStartOf="parent"

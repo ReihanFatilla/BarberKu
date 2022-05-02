@@ -10,6 +10,7 @@ import com.example.BookBath.databinding.ActivitySignUpBinding
 import com.example.BookBath.presentation.auth.signin.SignInActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
+import com.reift.weatherapp.helper.HelperFunction
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
         FirebaseApp.initializeApp(this);
+        HelperFunction.transparentStatusbar(this)
 
         mFirebaseInstance = FirebaseDatabase.getInstance()
         mDatabase = FirebaseDatabase.getInstance().getReference()

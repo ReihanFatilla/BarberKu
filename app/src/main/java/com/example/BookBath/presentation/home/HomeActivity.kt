@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.BookBath.data.local.sharedpref.LoginPreference
 import com.example.BookBath.databinding.ActivityHomeBinding
 import com.example.BookBath.presentation.auth.signin.SignInActivity
+import com.reift.weatherapp.helper.HelperFunction.transparentStatusbar
 
 class HomeActivity : AppCompatActivity() {
 
@@ -19,6 +20,7 @@ class HomeActivity : AppCompatActivity() {
         _binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        transparentStatusbar(this)
         preferences = LoginPreference(this)
 
         initView()

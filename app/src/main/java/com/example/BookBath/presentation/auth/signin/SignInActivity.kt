@@ -11,6 +11,7 @@ import com.example.BookBath.databinding.ActivitySignInBinding
 import com.example.BookBath.presentation.auth.signup.SignUpActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
+import com.reift.weatherapp.helper.HelperFunction
 
 class SignInActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class SignInActivity : AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
         FirebaseApp.initializeApp(this);
+        HelperFunction.transparentStatusbar(this)
 
         mDatabasePreference = FirebaseDatabase.getInstance().getReference("User")
         preferences = LoginPreference(this)

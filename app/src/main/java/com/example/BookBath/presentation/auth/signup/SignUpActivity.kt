@@ -62,8 +62,8 @@ class SignUpActivity : AppCompatActivity() {
     private fun iniView() {
         binding.apply{
             tbSignUp.setOnClickListener {
-                finishAffinity()
                 startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+                finish()
             }
             btnRegister.setOnClickListener{
                 register()
@@ -108,8 +108,8 @@ class SignUpActivity : AppCompatActivity() {
                 var user = snapshot.getValue(User::class.java)
                 if(user?.email?.replace(".", "|")  == null){
                     mDataseReference.child(email.replace(".", "|")).setValue(userRegister)
-                    finishAffinity()
                     startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+                    finish()
                 } else {
                     Toast.makeText(this@SignUpActivity, "Email Sudah di Gunakan", Toast.LENGTH_LONG).show()
                 }

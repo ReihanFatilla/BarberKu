@@ -46,12 +46,15 @@
         <activity
             android:name=".presentation.booking.location.LocationActivity"
             android:exported="false"
+            android:theme="@style/PrimaryColorCursor"
             android:label="@string/title_activity_location" />
         <activity
             android:name=".presentation.booking.booker.BookerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/PrimaryColorCursor"/>
         <activity
             android:name=".presentation.booking.service.ServiceActivity"
+            android:theme="@style/PrimaryColorCursor"
             android:exported="false" />
         <activity
             android:name=".presentation.auth.signup.SignUpActivity"

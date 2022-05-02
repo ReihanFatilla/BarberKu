@@ -61,8 +61,8 @@ class SignInActivity : AppCompatActivity() {
     private fun initView() {
         binding.apply{
             tbSignUp.setOnClickListener {
-                finishAffinity()
                 startActivity(Intent(this@SignInActivity, SignUpActivity::class.java))
+                finish()
             }
             btnLogin.setOnClickListener {
                 login()
@@ -97,8 +97,8 @@ class SignInActivity : AppCompatActivity() {
                     if (user.password.equals(password)){
                         preferences.put(LoginPreference.PREF_LOGIN_STATUS, true)
                         preferences.put(LoginPreference.PREF_NAME, user.name.toString())
-                        finishAffinity()
                         startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
+                        finish()
                     } else {
                         Toast.makeText(this@SignInActivity, "Password salah", Toast.LENGTH_SHORT).show()
                     }

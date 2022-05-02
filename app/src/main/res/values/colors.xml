@@ -12,6 +12,7 @@
 
     <color name="PrimaryColor">#454E7E</color>
     <color name="LighterPrimaryColor">#4F5987</color>
+    <color name="ItemBackroundColor">#6F7BB3</color>
     <color name="DarkerPrimaryColor">#4A5483</color>
 <!--    <color name="PrimaryColor">#1a237e</color>-->
 <!--    <color name="LighterPrimaryColor">#534bae</color>-->

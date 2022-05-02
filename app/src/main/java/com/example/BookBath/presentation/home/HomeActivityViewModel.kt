@@ -1,4 +1,4 @@
-package com.example.BookBath.presentation
+package com.example.BookBath.presentation.home
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -11,7 +11,7 @@ import com.example.BookBath.data.local.room.BookedBarber
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class HomeBookViewModel(application: Application): AndroidViewModel(application) {
+class HomeActivityViewModel(application: Application): AndroidViewModel(application) {
     private val barberDao: BarberDao = BarberDB.invoke(application).barberDao
     private val repository: BookBarRepository = BookBarRepository(barberDao)
 

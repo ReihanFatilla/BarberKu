@@ -3,6 +3,7 @@
     package="com.example.BookBath">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
 
     <application
@@ -12,6 +13,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bookbath">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".presentation.booking.location.LocationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_location" />
+        <activity
+            android:name=".presentation.booking.booker.BookerActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.auth.signup.SignUpActivity"
             android:exported="true" />
@@ -26,7 +51,7 @@
         </activity>
         <activity
             android:name=".presentation.home.HomeActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>

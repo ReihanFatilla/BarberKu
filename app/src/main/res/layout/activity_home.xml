@@ -84,7 +84,7 @@
             android:text="Ingin Cukur Rambut?"/>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_add_booking"
+            android:id="@+id/btn_add_booking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
@@ -144,7 +144,7 @@
             android:layout_marginEnd="-15dp"
             android:backgroundTint="@color/gray"
             app:cardElevation="0dp"
-            app:layout_constraintTop_toBottomOf="@id/cv_add_booking">
+            app:layout_constraintTop_toBottomOf="@id/btn_add_booking">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

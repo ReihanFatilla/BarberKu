@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.BookBath.data.local.sharedpref.LoginPreference
 import com.example.BookBath.databinding.ActivityHomeBinding
 import com.example.BookBath.presentation.auth.signin.SignInActivity
+import com.example.BookBath.presentation.booking.booker.BookerActivity
 import com.reift.weatherapp.helper.HelperFunction.transparentStatusbar
 
 class HomeActivity : AppCompatActivity() {
@@ -34,6 +35,11 @@ class HomeActivity : AppCompatActivity() {
                 finishAffinity()
                 startActivity(Intent(this@HomeActivity, SignInActivity::class.java))
                 preferences.logout()
+            }
+
+            btnAddBooking.setOnClickListener {
+                startActivity(Intent(this@HomeActivity, BookerActivity::class.java))
+                finish()
             }
         }
     }

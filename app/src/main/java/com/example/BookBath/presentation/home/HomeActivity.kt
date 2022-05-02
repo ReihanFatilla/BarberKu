@@ -39,7 +39,6 @@ class HomeActivity : AppCompatActivity() {
 
             btnAddBooking.setOnClickListener {
                 startActivity(Intent(this@HomeActivity, BookerActivity::class.java))
-                finish()
             }
         }
     }

@@ -24,7 +24,6 @@ class BookerActivity : AppCompatActivity() {
         binding.apply {
             btnNext.setOnClickListener {
                 startActivity(Intent(this@BookerActivity, ServiceActivity::class.java))
-                finish()
             }
 
             btnBack.setOnClickListener {

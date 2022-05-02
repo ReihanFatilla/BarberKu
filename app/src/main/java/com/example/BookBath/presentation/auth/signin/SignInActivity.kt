@@ -53,8 +53,8 @@ class SignInActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if(preferences.getLoginStatus(LoginPreference.PREF_LOGIN_STATUS)){
-            finishAffinity()
             startActivity(Intent(this, HomeActivity::class.java))
+            finish()
         }
     }
 

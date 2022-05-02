@@ -3,8 +3,12 @@
     package="com.example.BookBath">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +17,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bookbath">
+        <activity
+            android:name=".presentation.splash.SplashScreenActivity"
+            android:exported="true">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -25,10 +39,9 @@
              project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
              "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
         -->
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="@string/map_key" />
 
         <activity
             android:name=".presentation.booking.location.LocationActivity"
@@ -38,17 +51,14 @@
             android:name=".presentation.booking.booker.BookerActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.booking.service.ServiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.auth.signup.SignUpActivity"
             android:exported="true" />
         <activity
             android:name=".presentation.auth.signin.SignInActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".presentation.home.HomeActivity"
             android:exported="true" />

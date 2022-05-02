@@ -3,6 +3,8 @@ package com.example.BookBath.presentation.auth.signin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.widget.Toast
 import com.example.BookBath.presentation.home.HomeActivity
 import com.example.BookBath.data.remote.firebase.User
@@ -32,12 +34,26 @@ class SignInActivity : AppCompatActivity() {
         preferences = LoginPreference(this)
 
 
+        passwordShowHide()
         initView()
+    }
+
+    private fun passwordShowHide() {
+        binding.apply {
+            btnShowHide.setOnClickListener {
+                if(edtPassword.transformationMethod == PasswordTransformationMethod.getInstance()){
+                    edtPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                } else {
+                    edtPassword.transformationMethod = PasswordTransformationMethod.getInstance()
+                }
+            }
+        }
     }
 
     override fun onStart() {
         super.onStart()
         if(preferences.getLoginStatus(LoginPreference.PREF_LOGIN_STATUS)){
+            finishAffinity()
             startActivity(Intent(this, HomeActivity::class.java))
         }
     }
@@ -45,8 +61,8 @@ class SignInActivity : AppCompatActivity() {
     private fun initView() {
         binding.apply{
             tbSignUp.setOnClickListener {
+                finishAffinity()
                 startActivity(Intent(this@SignInActivity, SignUpActivity::class.java))
-                finish()
             }
             btnLogin.setOnClickListener {
                 login()
@@ -81,6 +97,7 @@ class SignInActivity : AppCompatActivity() {
                     if (user.password.equals(password)){
                         preferences.put(LoginPreference.PREF_LOGIN_STATUS, true)
                         preferences.put(LoginPreference.PREF_NAME, user.name.toString())
+                        finishAffinity()
                         startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
                     } else {
                         Toast.makeText(this@SignInActivity, "Password salah", Toast.LENGTH_SHORT).show()

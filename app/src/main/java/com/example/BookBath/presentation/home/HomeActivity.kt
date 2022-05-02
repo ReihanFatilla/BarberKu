@@ -31,6 +31,7 @@ class HomeActivity : AppCompatActivity() {
             tvName.text = preferences.getName(LoginPreference.PREF_NAME)
 
             tvLogout.setOnClickListener {
+                finishAffinity()
                 startActivity(Intent(this@HomeActivity, SignInActivity::class.java))
                 preferences.logout()
             }

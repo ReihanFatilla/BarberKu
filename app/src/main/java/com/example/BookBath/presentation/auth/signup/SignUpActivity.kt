@@ -3,6 +3,8 @@ package com.example.BookBath.presentation.auth.signup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.widget.Toast
 import com.example.BookBath.data.remote.firebase.User
@@ -33,14 +35,35 @@ class SignUpActivity : AppCompatActivity() {
         mDataseReference = mFirebaseInstance.getReference("User")
 
 
+        passwordShowHide()
         iniView()
+    }
+
+    private fun passwordShowHide() {
+        binding.apply {
+            btnShowHide.setOnClickListener {
+                if(edtPassword.transformationMethod == PasswordTransformationMethod.getInstance()){
+                    edtPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                } else {
+                    edtPassword.transformationMethod = PasswordTransformationMethod.getInstance()
+                }
+            }
+            btnShowHideConfirm.setOnClickListener {
+                if(edtPasswordConfirm.transformationMethod == PasswordTransformationMethod.getInstance()){
+                    edtPasswordConfirm.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                } else {
+                    edtPasswordConfirm.transformationMethod = PasswordTransformationMethod.getInstance()
+                }
+            }
+        }
+
     }
 
     private fun iniView() {
         binding.apply{
             tbSignUp.setOnClickListener {
+                finishAffinity()
                 startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
-                finish()
             }
             btnRegister.setOnClickListener{
                 register()
@@ -85,6 +108,7 @@ class SignUpActivity : AppCompatActivity() {
                 var user = snapshot.getValue(User::class.java)
                 if(user?.email?.replace(".", "|")  == null){
                     mDataseReference.child(email.replace(".", "|")).setValue(userRegister)
+                    finishAffinity()
                     startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
                 } else {
                     Toast.makeText(this@SignUpActivity, "Email Sudah di Gunakan", Toast.LENGTH_LONG).show()

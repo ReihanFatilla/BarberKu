@@ -25,11 +25,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:background="@color/PrimaryColor"
-            android:src="@drawable/ic_baseline_account_circle_24"
-            app:tint="@color/white" />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:src="@drawable/ic_person"
+            app:tint="@color/PrimaryColor" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -43,8 +44,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_add_book"
             app:tint="@color/PrimaryColor" />
@@ -54,11 +55,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Service"
+        android:text="Servis"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/cv_service"
         app:layout_constraintStart_toStartOf="@+id/cv_service"
         app:layout_constraintTop_toBottomOf="@id/cv_service" />
@@ -69,8 +70,8 @@
         android:text="Data Diri"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/cv_booker"
         app:layout_constraintStart_toStartOf="@+id/cv_booker"
         app:layout_constraintTop_toBottomOf="@id/cv_booker" />
@@ -86,8 +87,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_location"
             app:tint="@color/gray" />
@@ -97,11 +98,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location"
+        android:text="Lokasi"
         android:textColor="@color/dark_gray"
         android:textStyle="bold"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/cv_location"
         app:layout_constraintStart_toStartOf="@+id/cv_location"
         app:layout_constraintTop_toBottomOf="@id/cv_location" />

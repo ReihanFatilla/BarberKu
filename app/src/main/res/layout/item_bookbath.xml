@@ -106,7 +106,7 @@
                     android:layout_marginStart="10dp"
                     android:textColor="@color/PrimaryColor"
                     android:textStyle="bold"
-                    android:textSize="13sp"
+                    android:textSize="13sp" />
 
             </LinearLayout>
 

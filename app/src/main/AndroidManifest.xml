@@ -41,7 +41,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="" />
+            android:value="AIzaSyAA9nG4zl2b-sv--wVPLvY-BFL2ksdOswE" />
 
         <activity
             android:name=".presentation.booking.location.LocationActivity"

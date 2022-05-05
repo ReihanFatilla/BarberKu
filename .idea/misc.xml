@@ -4,8 +4,6 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Development/Android/BookBath/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.2985" />
-        <entry key="..\:/Users/Development/Android/BookBath/app/src/main/res/layout/activity_home.xml" value="0.24954710144927536" />
-        <entry key="..\:/Users/Development/Android/BookBath/app/src/main/res/layout/activity_location.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Development/Android/BookBath/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Development/Android/BookBath/app/src/main/res/layout/activity_sign_in.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Development/Android/BookBath/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
@@ -17,6 +15,9 @@
         <entry key="app/src/main/res/drawable/custom_edit_text_auth.xml" value="0.135" />
         <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.135" />
         <entry key="app/src/main/res/drawable/ic_hide_unhide.xml" value="0.135" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/ic_location.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/ic_next.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.135" />
         <entry key="app/src/main/res/layout/activity_booker.xml" value="0.23596014492753623" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />

@@ -25,7 +25,6 @@ class ServiceActivity : AppCompatActivity() {
         binding.apply{
             btnNext.setOnClickListener {
                 startActivity(Intent(this@ServiceActivity, LocationActivity::class.java))
-                finish()
             }
 
             btnBack.setOnClickListener {

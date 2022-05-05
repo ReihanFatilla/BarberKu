@@ -1,14 +1,16 @@
 package com.example.BarberKu.presentation.booking.location
 
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.BarberKu.R
 import com.example.BarberKu.databinding.ActivityLocationBinding
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -20,6 +22,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
+@SuppressLint("MissingPermission")
 class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
@@ -36,6 +39,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     lateinit var locationRequest: LocationRequest
     lateinit var locationCallback: LocationCallback
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,15 +123,19 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private fun checkLocationPermission(): Boolean {
         if(ContextCompat.checkSelfPermission(this,
-                ACCES_FINE_LOCATION) != PERMISSION_GRANTED){
+                ACCES_FINE_LOCATION
+            ) != PERMISSION_GRANTED
+        ){
             if(ActivityCompat.shouldShowRequestPermissionRationale(this, ACCES_FINE_LOCATION))
                 ActivityCompat.requestPermissions(this, arrayOf(
                     ACCES_FINE_LOCATION
-                ), MY_PERMISSION_CODE)
+                ), MY_PERMISSION_CODE
+                )
             else {
                 ActivityCompat.requestPermissions(this, arrayOf(
                     ACCES_FINE_LOCATION
-                ), MY_PERMISSION_CODE)
+                ), MY_PERMISSION_CODE
+                )
                 return false
                 }
         } else {
@@ -144,7 +152,9 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
         // Google Play Map Services
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             if(ContextCompat.checkSelfPermission(this,
-                    ACCES_FINE_LOCATION) == PERMISSION_GRANTED){
+                    ACCES_FINE_LOCATION
+                ) == PERMISSION_GRANTED
+            ){
                 mMap.isMyLocationEnabled = true
             }
         } else {

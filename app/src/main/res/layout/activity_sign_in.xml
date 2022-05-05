@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:padding="10dp"
-        android:text="BookBar"
+        android:text="BarberKu"
         android:textColor="@color/white"
         android:textSize="70sp"
         android:textStyle="bold"
